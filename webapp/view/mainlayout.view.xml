@@ -1,9 +1,70 @@
 <mvc:View controllerName="progresstoolsTeam4progresstools.controller.mainlayout" xmlns:html="http://www.w3.org/1999/xhtml"
-	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:tnt="sap.tnt">
 	<App>
 		<pages>
 			<Page title="{i18n>title}">
-				<content></content>
+				<content>
+					<tnt:ToolHeader>
+		<Button icon="sap-icon://menu2" type="Transparent">
+			<layoutData>
+				<OverflowToolbarLayoutData />
+			</layoutData>
+		</Button>
+		<ToolbarSpacer width="20px" />
+		<Button text="File" type="Transparent">
+			<layoutData>
+				<OverflowToolbarLayoutData priority="Low" />
+			</layoutData>
+		</Button>
+		<Button text="Edit" type="Transparent">
+			<layoutData>
+				<OverflowToolbarLayoutData priority="Low" />
+			</layoutData>
+		</Button>
+		<Button text="View" type="Transparent">
+			<layoutData>
+				<OverflowToolbarLayoutData priority="Low" />
+			</layoutData>
+		</Button>
+		<Button text="Navigate" type="Transparent">
+			<layoutData>
+				<OverflowToolbarLayoutData priority="Low" />
+			</layoutData>
+		</Button>
+		<Button text="Code" type="Transparent">
+			<layoutData>
+				<OverflowToolbarLayoutData priority="Low" />
+			</layoutData>
+		</Button>
+		<Button text="Refactor" type="Transparent">
+			<layoutData>
+				<OverflowToolbarLayoutData priority="Low" />
+			</layoutData>
+		</Button>
+		<Button text="Run" type="Transparent">
+			<layoutData>
+				<OverflowToolbarLayoutData priority="Low" />
+			</layoutData>
+		</Button>
+		<Button text="Tools" type="Transparent">
+			<layoutData>
+				<OverflowToolbarLayoutData priority="Low" />
+			</layoutData>
+		</Button>
+		<tnt:ToolHeaderUtilitySeparator />
+		<ToolbarSpacer>
+			<layoutData>
+				<OverflowToolbarLayoutData minWidth="20px" />
+			</layoutData>
+		</ToolbarSpacer>
+		<Button text="Alan Smith" type="Transparent" press="onUserNamePress">
+			<layoutData>
+				<OverflowToolbarLayoutData />
+			</layoutData>
+		</Button>
+
+	</tnt:ToolHeader>
+				</content>
 			</Page>
 		</pages>
 	</App>
