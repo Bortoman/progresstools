@@ -5,65 +5,69 @@
 			<Page title="{i18n>title}">
 				<content>
 					<tnt:ToolHeader>
-		<Button icon="sap-icon://menu2" type="Transparent">
+		<Button icon="sap-icon://home" type="Transparent" press="onHomePress">
 			<layoutData>
 				<OverflowToolbarLayoutData />
 			</layoutData>
 		</Button>
-		<ToolbarSpacer width="20px" />
-		<Button text="File" type="Transparent">
+		<IconTabHeader id="iconTabHeader"
+			selectedKey="invalidKey"
+			select="onSelectTab"
+			showOverflowSelectList="true"
+			backgroundDesign="Transparent"
+			mode="Inline">
 			<layoutData>
-				<OverflowToolbarLayoutData priority="Low" />
+				<OverflowToolbarLayoutData
+					shrinkable="true" />
 			</layoutData>
-		</Button>
-		<Button text="Edit" type="Transparent">
-			<layoutData>
-				<OverflowToolbarLayoutData priority="Low" />
-			</layoutData>
-		</Button>
-		<Button text="View" type="Transparent">
-			<layoutData>
-				<OverflowToolbarLayoutData priority="Low" />
-			</layoutData>
-		</Button>
-		<Button text="Navigate" type="Transparent">
-			<layoutData>
-				<OverflowToolbarLayoutData priority="Low" />
-			</layoutData>
-		</Button>
-		<Button text="Code" type="Transparent">
-			<layoutData>
-				<OverflowToolbarLayoutData priority="Low" />
-			</layoutData>
-		</Button>
-		<Button text="Refactor" type="Transparent">
-			<layoutData>
-				<OverflowToolbarLayoutData priority="Low" />
-			</layoutData>
-		</Button>
-		<Button text="Run" type="Transparent">
-			<layoutData>
-				<OverflowToolbarLayoutData priority="Low" />
-			</layoutData>
-		</Button>
-		<Button text="Tools" type="Transparent">
-			<layoutData>
-				<OverflowToolbarLayoutData priority="Low" />
-			</layoutData>
-		</Button>
-		<tnt:ToolHeaderUtilitySeparator />
+			<items>
+				<IconTabFilter text="Documentation">
+				</IconTabFilter>
+				<IconTabFilter text="Explored">
+				</IconTabFilter>
+				<IconTabFilter text="API Reference">
+				</IconTabFilter>
+				<IconTabFilter text="Demo Apps">
+				</IconTabFilter>
+			</items>
+		</IconTabHeader>
+
 		<ToolbarSpacer>
 			<layoutData>
-				<OverflowToolbarLayoutData minWidth="20px" />
+				<OverflowToolbarLayoutData minWidth="16px" />
 			</layoutData>
 		</ToolbarSpacer>
-		<Button text="Alan Smith" type="Transparent" press="onUserNamePress">
+		<Button icon="sap-icon://search" type="Transparent">
+			<layoutData>
+				<OverflowToolbarLayoutData />
+			</layoutData>
+		</Button>
+		<Button icon="sap-icon://comment" type="Transparent">
 			<layoutData>
 				<OverflowToolbarLayoutData />
 			</layoutData>
 		</Button>
 
+		<MenuButton icon="sap-icon://hint" type="Transparent">
+			<layoutData>
+				<OverflowToolbarLayoutData />
+			</layoutData>
+			<menu>
+				<Menu>
+					<items>
+						<MenuItem text="Edit" icon="sap-icon://edit" />
+						<MenuItem text="Save" icon="sap-icon://save" />
+					</items>
+				</Menu>
+			</menu>
+		</MenuButton>
+
 	</tnt:ToolHeader>
+	<Panel>
+		<Label
+			id="labelId"
+			text="Home Screen"/>
+	</Panel>
 				</content>
 			</Page>
 		</pages>
