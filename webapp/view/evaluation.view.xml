@@ -15,31 +15,19 @@
 								<Text text="Task: manage grua"/>
 							</VBox>
 						</FlexBox>
-						<FlexBox direction="Row">
+						<FlexBox direction="Row" class="nueva">
 							
-							<FlexBox width="75%" direction="Column" class="sapUiLargeMargin">
-								<VBox>
-									<Text text="Work done."/>
-								<RatingIndicator maxValue="5" class="sapUiSmallMarginBottom" value="0" iconSize="32px" tooltip="Rating Tooltip"/>
-								</VBox>
-								
+						
+							<VBox  class="sapUiLargeMargin">
+							
+								<RatingIndicator class="aaa" maxValue="5" value="0" iconSize="32px" tooltip="Rating Tooltip"/>
 								<Text text="Professionalism."/>
 								<RatingIndicator maxValue="6" class="sapUiSmallMarginBottom" value="0" iconSize="32px" tooltip="Rating Tooltip"/>
 								<Text text="Can I get an answer?"/>
 								<RatingIndicator maxValue="5" class="sapUiSmallMarginBottom" value="0" iconSize="32px" tooltip="Rating Tooltip"/>
 								<Text text="Global feedback."/>
 								<RatingIndicator maxValue="5" class="sapUiSmallMarginBottom" value="0" iconSize="32px" tooltip="Rating Tooltip"/>
-							</FlexBox>
-							<FlexBox justifyContent="Center" width="75%" direction="Column" class="sapUiLargeMargin">
-								<Text text="Work done."/>
-								<RatingIndicator maxValue="5" class="sapUiSmallMarginBottom" value="0" iconSize="32px" tooltip="Rating Tooltip"/>
-								<Text text="Professionalism."/>
-								<RatingIndicator maxValue="6" class="sapUiSmallMarginBottom" value="0" iconSize="32px" tooltip="Rating Tooltip"/>
-								<Text text="Can I get an answer?"/>
-								<RatingIndicator maxValue="5" class="sapUiSmallMarginBottom" value="0" iconSize="32px" tooltip="Rating Tooltip"/>
-								<Text text="Global feedback."/>
-								<RatingIndicator maxValue="5" class="sapUiSmallMarginBottom" value="0" iconSize="32px" tooltip="Rating Tooltip"/>
-							</FlexBox>
+							</VBox>
 						</FlexBox>
 					</FlexBox>
 				</content>
