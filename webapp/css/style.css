@@ -1,1 +1,136 @@
 /* Enter your custom styles here */
+
+.imgsize {
+    margin-left: 10%;
+}
+
+#__tile1-title-inner,
+#__xmlview0--tile1-title-inner,
+#__tile0-title-inner,
+#__tile2-title-inner,
+#__tile3-title-inner,
+#__tile4-title-inner,
+#__tile5-title-inner {
+    color: black;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.tileLayout {
+    float: left;
+}
+
+.backgroundHover {
+    background: rgba(22, 22, 22, 0.6);
+}
+
+.messageHover {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    width: 90%;
+    height: 400px;
+}
+
+.textHover {
+    height: 100%;
+    width: 100%;
+    z-index: 50;
+}
+
+.progressimg {
+    width: 100%;
+    max-width:858px;
+    max-height: 600px;
+}
+/* Enter your custom styles here */
+
+#__indicator0{
+	padding-left: 50px;
+	padding-right: 50px !important;
+	position:relative;
+	bottom:50px;
+}
+
+.suputamadre{
+	padding-top:50px;
+	padding-left: 100px;
+	padding-bottom: 50px;
+	padding-right: 100px;
+	height: 300px;
+    width: 300px;
+    border-radius: 150px !important;
+}
+.title{
+	padding-top:50px;
+	font-size:70px !important;
+	margin-bottom:20px;
+}
+.age{font-size:30px !important; color:grey; margin-bottom:10px;}
+.location{font-size:30px !important; color:grey; margin-bottom:10px;}
+.email{font-size:30px !important; color:grey; margin-bottom:10px;}
+.lvl{font-size:30px !important; padding-left:45%; margin-bottom:65px;}
+.boi{padding-left:150px; font-size:40px;}
+.telf{font-size:30px !important; color:grey; margin-bottom:10px;}
+.ageIco{
+	width:40px;
+	height:40px;
+}
+.iconMail{
+	margin-right:15px;
+}
+.iconCall{
+	margin-right:15px;
+}
+.iconCalendar{
+	margin-right:15px;
+}
+.iconLocation{
+	margin-right:15px;
+}
+.flexBox{
+	margin-bottom:40px;
+}
+.trophy{
+	margin-left:15px;
+}
+.buttonContainer{
+	text-align: center !important;
+	width: 50%;
+}
+.buttonLog{
+	text-align: center;
+	width:200px;
+	height:100px;
+	padding:40px;
+}
+.side-navigation-demo {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+
+    max-width: 15rem;
+}/* Enter your custom styles here */
+
+.sideNavigation{
+	height: 650px;
+	display: -webkit-flex; /* Safari */
+    -webkit-flex-wrap: wrap; /* Safari 6.1+ */
+    display: flex;   
+    flex-wrap: wrap;
+}
+.name{
+	font-size:2em;
+	margin-bottom: 15px;
+}
+
+.avatar{
+	left-bottom: 40%;
+}

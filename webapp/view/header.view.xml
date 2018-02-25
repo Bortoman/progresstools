@@ -1,17 +1,13 @@
-<core:FragmentDefinition xmlns="sap.m"
-   xmlns:core="sap.ui.core" xmlns:tnt="sap.tnt">
+<mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
+   xmlns:core="sap.ui.core" xmlns:tnt="sap.tnt" controllerName="progresstoolsTeam4progresstools.controller.header">
 	<tnt:ToolHeader>
-	<Button icon="sap-icon://home" type="Transparent" press="onHomePress">
-		<layoutData>
-			<OverflowToolbarLayoutData/>
-		</layoutData>
-	</Button>
 	<IconTabHeader id="iconTabHeader" selectedKey="invalidKey" select="onSelectTab" showOverflowSelectList="true" backgroundDesign="Transparent"
 		mode="Inline">
 		<layoutData>
 			<OverflowToolbarLayoutData shrinkable="true"/>
 		</layoutData>
 		<items>
+			<IconTabFilter text="Home" key="0"></IconTabFilter>
 			<IconTabFilter text="Courses" key="1"></IconTabFilter>
 			<IconTabFilter text="Progression Plan" key="2" ></IconTabFilter>
 		</items>
@@ -21,18 +17,19 @@
 			<OverflowToolbarLayoutData minWidth="16px"/>
 		</layoutData>
 	</ToolbarSpacer>
-	<MenuButton icon="https://png.pngtree.com/element_origin_min_pic/17/09/01/75775d69e115fe17a43c29ff3c5149be.jpg" type="Transparent">
+	<MenuButton icon="https://png.icons8.com/office/80/000000/worker-male.png" type="Transparent">
 		<layoutData>
 			<OverflowToolbarLayoutData/>
 		</layoutData>
 		<menu>
 			<Menu>
 				<items>
-					<MenuItem text="Edit" icon="sap-icon://edit"/>
+					<MenuItem text="Profile" icon="sap-icon://account" press="goToEdit"/>
 					<MenuItem text="Logout" icon="sap-icon://log"/>
 				</items>
 			</Menu>
 		</menu>
 	</MenuButton>
 </tnt:ToolHeader>
-</core:FragmentDefinition>
+<App id="app"></App>
+</mvc:View>

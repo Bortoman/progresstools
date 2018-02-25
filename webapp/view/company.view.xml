@@ -1,0 +1,144 @@
+<mvc:View controllerName="progresstoolsTeam4progresstools.controller.company" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:tnt="sap.tnt" xmlns:core="sap.ui.core" xmlns:m="sap.m" height="100%" xmlns:l="sap.ui.layout"
+	xmlns:c="sap.suite.ui.microchart">
+	<App height="100%">
+		<pages height="100%">
+			<Page title="{i18n>title}">
+				<content>					<!--<m:Button text="Toggle Collapse/Expand" icon="sap-icon://menu2" press="onCollapseExpandPress"/>
+					<m:Button text="Show/Hide Sub Item 3" icon="sap-icon://menu2" press="onHideShowSubItemPress"/>-->
+					<!--<l:HorizontalLayout class="sapUiContentPadding">-->
+					<HBox>
+						<tnt:SideNavigation class = "sideNavigation" id="sideNavigation" selectedItem="subItemThree">
+							<tnt:item>
+								<tnt:NavigationList expanded="true">
+									<tnt:NavigationListItem text="Sagrada Familia" icon="sap-icon://building">
+										<tnt:NavigationListItem select="changeValues" text="Summary"/>
+										<tnt:NavigationListItem select="changeValues" text="Team 1"/>
+										<tnt:NavigationListItem select="changeValues" text="Team 2"/>
+										<tnt:NavigationListItem select="changeValues" text="Team 3" id="subItemThree"/>
+									</tnt:NavigationListItem>
+									<tnt:NavigationListItem expanded="false" text="Roppongi Hills Mori Tower" icon="sap-icon://building">
+										<tnt:NavigationListItem select="changeValues" text="Summary"/>
+										<tnt:NavigationListItem select="changeValues" text="Team 1"/>
+										<tnt:NavigationListItem select="changeValues" text="Team 2"/>
+										<tnt:NavigationListItem select="changeValues" text="Team 3"/>
+									</tnt:NavigationListItem>
+									<tnt:NavigationListItem expanded="false" text="Torre Diagonal Mar B1" icon="sap-icon://addresses">
+										<tnt:NavigationListItem select="changeValues" text="Summary"/>
+										<tnt:NavigationListItem select="changeValues" text="Team 1"/>
+										<tnt:NavigationListItem select="changeValues" text="Team 2"/>
+										<tnt:NavigationListItem select="changeValues" text="Team 3"/>
+									</tnt:NavigationListItem>
+									<tnt:NavigationListItem expanded="false" text="Hassan Tower" icon="sap-icon://building">
+										<tnt:NavigationListItem select="changeValues" text="Summary"/>
+										<tnt:NavigationListItem select="changeValues" text="Team 1"/>
+										<tnt:NavigationListItem select="changeValues" text="Team 2"/>
+										<tnt:NavigationListItem select="changeValues" text="Team 3"/>
+									</tnt:NavigationListItem>
+									<tnt:NavigationListItem expanded="true" text="Coliseum" icon="sap-icon://official-service">
+										<tnt:NavigationListItem select="changePage" text="Evaluate Team 1"/>
+										
+									</tnt:NavigationListItem>
+								</tnt:NavigationList>
+							</tnt:item>
+							<tnt:fixedItem>
+								<tnt:NavigationList></tnt:NavigationList>
+							</tnt:fixedItem>
+						</tnt:SideNavigation>
+						<FlexBox direction="Column" width="100%">
+							<!--<l:HorizontalLayout class="sapUiContentPadding">-->
+							<FlexBox id="flex" justifyContent="SpaceBetween" alignItems="Center" class="sapUiLargeMargin">
+								<!-- CASILLA 1-->
+								<m:GenericTile header="Revenue Dynamics" frameType="TwoByOne" press="press">
+									<m:tileContent>
+										<m:TileContent footer="Red Delta">
+											<m:content>
+												<c:DeltaMicroChart id="1c" value1="-105" value2="-98" title1="May 2014" title2="Apr 2014" displayValue1="-105 Mio" displayValue2="-98 Mio"
+													deltaDisplayValue="7 Mio" color="Error"/>
+											</m:content>
+										</m:TileContent>
+										<m:TileContent footer="Yellow Delta">
+											<m:content>
+												<c:DeltaMicroChart id="11c" value1="-7" value2="16" title1="May 2014" title2="Apr 2014" displayValue1="-7 Mio" displayValue2="16 Mio"
+													deltaDisplayValue="23 Mio" color="Critical"/>
+											</m:content>
+										</m:TileContent>
+									</m:tileContent>
+								</m:GenericTile>
+								<!-- CASILLA 2-->
+								<HBox width="20rem" height="10rem" alignItems="Center" class="sapUiSmallMargin">
+									<items>
+										<c:InteractiveLineChart id="2c" selectionChanged="selectionChanged" press="press">
+											<c:points>
+												<c:InteractiveLineChartPoint value="23.1" label="May" color="Normal"/>
+												<c:InteractiveLineChartPoint value="2.2" label="June" color="Critical"/>
+												<c:InteractiveLineChartPoint value="41.4" label="July" color="Good"/>
+												<c:InteractiveLineChartPoint value="5.8" label="Aug" color="Critical"/>
+												<c:InteractiveLineChartPoint value="49.9" label="Sep" color="Good" selected="true"/>
+												<c:InteractiveLineChartPoint value="-10.2" label="Oct" color="Error"/>
+											</c:points>
+										</c:InteractiveLineChart>
+									</items>
+								</HBox>
+								<!-- CASILLA 3-->
+								<c:HarveyBallMicroChart size="L" total="100" totalScale="Mrd" press="press">
+									<c:items>
+										<c:HarveyBallMicroChartItem id="3c" fraction="63.5" color="Good" fractionScale="Mrd"/>
+									</c:items>
+								</c:HarveyBallMicroChart>
+							</FlexBox>
+							<!--<l:HorizontalLayout class="sapUiContentPadding">-->
+							<FlexBox id="flexx"  justifyContent="SpaceBetween" alignItems="Center" class="sapUiLargeMargin">
+								<!-- CASILLA 4-->
+								<c:ComparisonMicroChart id="4c" size="M" scale="M" class="sapUiSmallMargin" press="press"
+									colorPalette="#5cbae6, #b6d957, #fac364, #8cd3ff, #d998cb, #f2d249, #93b9c6, #ccc5a8, #52bacc, #dbdb46, #98aafb">
+									<c:data>
+										<c:ComparisonMicroChartData title="Americas" value="10"/>
+										<c:ComparisonMicroChartData title="EMEA" value="50"/>
+										<c:ComparisonMicroChartData title="APAC" value="-20"/>
+										<c:ComparisonMicroChartData title="LTA" value="60"/>
+										<c:ComparisonMicroChartData title="ALPS" value="-20"/>
+										<c:ComparisonMicroChartData title="Australia" value="55"/>
+									</c:data>
+								</c:ComparisonMicroChart>
+								<!-- CASILLA 5-->
+								<HBox width="20rem" height="10rem" alignItems="Center" class="sapUiSmallMargin">
+									<items>
+										<c:InteractiveLineChart id="5c" selectionChanged="selectionChanged" press="press">
+											<c:points>
+												<c:InteractiveLineChartPoint value="3.1" label="May" color="Normal"/>
+												<c:InteractiveLineChartPoint value="-22.2" label="June" color="Critical"/>
+												<c:InteractiveLineChartPoint value="10.4" label="July" color="Good"/>
+												<c:InteractiveLineChartPoint value="55.8" label="Aug" color="Critical"/>
+												<c:InteractiveLineChartPoint value="40.9" label="Sep" color="Good" selected="true"/>
+												<c:InteractiveLineChartPoint value="10.2" label="Oct" color="Error"/>
+											</c:points>
+										</c:InteractiveLineChart>
+									</items>
+								</HBox>
+								<!-- CASILLA 6-->
+								<m:GenericTile header="Total Income Change" subheader="By year" frameType="OneByOne" press="press">
+									<m:tileContent>
+										<m:TileContent footer="Current vs previous" unit="EUR">
+											<m:content>
+												<c:DeltaMicroChart id="6c" value1="35" value2="33" title1="Jan 2015" title2="Jan 2014" displayValue1="35 Mio" displayValue2="33 Mio"
+													deltaDisplayValue="2 Mio" color="Good"/>
+											</m:content>
+										</m:TileContent>
+									</m:tileContent>
+								</m:GenericTile>
+							</FlexBox>
+						</FlexBox>
+					</HBox>
+					<l:VerticalLayout class="sapUiContentPadding" width="100%">
+						<l:content>
+							<core:HTML id="h"
+								content='&lt;iframe src=&quot;https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1926.2499264296455!2d139.76127015550315!3d35.71260826110369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c2ffa206ea3%3A0x30e407498313ba95!2sUniversidad+de+Tokio!5e0!3m2!1ses!2ses!4v1519510224520&quot; width=&quot;100%&quot; height=&quot;195&quot; frameborder=&quot;0&quot; style=&quot;border:0&quot; allowfullscreen&gt;&lt;/iframe&gt;'></core:HTML>
+						</l:content>
+					</l:VerticalLayout>
+					<!--</l:HorizontalLayout>-->
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

@@ -1,0 +1,82 @@
+<mvc:View controllerName="progresstoolsTeam4progresstools.controller.profile" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:tnt="sap.tnt" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
+	<App>
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<Panel>
+						<Label id="labelId" text="Home Screen"/>
+					</Panel>
+					<FlexBox id="box_a">
+						<!-- Photo + Info -->
+						<Image class="suputamadre" src="/webapp/images/chino.jpg"></Image>
+						<VBox>
+							<Text class="title" text="Juan Padilla Lopez"/>
+							<FlexBox>
+								<core:Icon class="iconCalendar" size="2rem" color="#405062" src="sap-icon://calendar"/>
+								<Text class="age" text=" 25 years old"/>
+							</FlexBox>
+							<FlexBox>
+								<core:Icon class="iconLocation" size="2rem" color="#405062" src="sap-icon://home"/>
+								<Text class="location" text="Barcelona"/>
+							</FlexBox>
+							<FlexBox>
+								<core:Icon class="iconMail" size="2rem" color="#405062" src="sap-icon://arobase"/>
+								<Text class="email" text="juanpalo@gmail.com"/>
+							</FlexBox>
+							<FlexBox>
+								<core:Icon class="iconCall" size="2rem" color="#405062" src="sap-icon://call"/>
+								<Text class="telf" text="123456789"/>
+							</FlexBox>
+						</VBox>
+					</FlexBox>
+					<Panel class="flexBox">
+						<!-- Achievements -->
+						<headerToolbar>
+							<Toolbar>
+								<Text class="boi" text="Achievements"/>
+							</Toolbar>
+						</headerToolbar>
+						<FlexBox height="100%" alignItems="Start" justifyContent="Start">
+							<items>
+								<HBox>
+									
+									<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Achievement #1" subheader="+50h"
+										press="press">
+										<TileContent>
+											<core:Icon size="4rem" src="sap-icon://competitor"/>
+										</TileContent>
+									</GenericTile>
+									
+									<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Achievement #2" subheader="+100h"
+										press="press">
+										<TileContent>
+											<core:Icon size="4rem" src="sap-icon://competitor"/>
+										</TileContent>
+									</GenericTile>
+									
+									<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Achievement #3" subheader="+150h"
+										press="press">
+										<TileContent>
+											<core:Icon size="4rem" src="sap-icon://competitor"/>
+										</TileContent>
+									</GenericTile>
+									
+									<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Achievement #4" subheader="+250h"
+										press="press">
+										<TileContent>
+											<core:Icon size="4rem" src="sap-icon://competitor"/>
+										</TileContent>
+									</GenericTile>
+									
+								</HBox>
+							</items>
+						</FlexBox>
+					</Panel>
+					<Text class="lvl" text="Level: 20"/>
+					<ProgressIndicator class="sapUiSmallMarginBottom" percentValue="50" displayValue="50%" showValue="true" state="Success" displayOnly="true"/>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

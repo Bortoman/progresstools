@@ -39,7 +39,7 @@
 
 	"sap.ui5": {
 		"rootView": {
-			"viewName": "progresstoolsTeam4progresstools.view.mainlayout",
+			"viewName": "progresstoolsTeam4progresstools.view.header",
 			"type": "XML"
 		},
 		"dependencies": {
@@ -63,6 +63,82 @@
 				"type": "sap.ui.model.resource.ResourceModel",
 				"settings": {
 					"bundleName": "progresstoolsTeam4progresstools.i18n.i18n"
+				}
+			}
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "progresstoolsTeam4progresstools.view",
+				"controlId": "app",
+				"controlAggregation": "pages",
+				"transition": "slide",
+				"async": true
+			},
+			"routes": [{
+				"pattern": "",
+				"name": "entrance",
+				"target": "entrance"
+			},
+			{
+				"pattern": "courses",
+				"name": "courses",
+				"target": "courses"
+			},
+			{
+				"pattern": "evaluation",
+				"name": "evaluation",
+				"target": "evaluation"
+			},
+			{
+				"pattern": "progressionplan",
+				"name": "progressionplan",
+				"target": "progressionplan"
+			},
+			{
+				"pattern": "profile",
+				"name": "profile",
+				"target": "profile"
+			},
+			{
+				"pattern": "home",
+				"name": "home",
+				"target": "home"
+			},
+			{
+				"pattern": "company",
+				"name": "company",
+				"target": "company"
+			}],
+			"targets": {
+				"entrance": {
+					"viewId": "entrance",
+					"viewName": "entrance"
+				},
+				"home": {
+					"viewId": "home",
+					"viewName": "home"
+				},
+				"evaluation": {
+					"viewId": "evaluation",
+					"viewName": "evaluation"
+				},
+				"courses": {
+					"viewId": "courses",
+					"viewName": "courses"
+				},
+				"progressionplan": {
+					"viewId": "progressionplan",
+					"viewName": "progressionplan"
+				},
+				"profile": {
+					"viewId": "profile",
+					"viewName": "profile"
+				},
+			    "company": {
+					"viewId": "company",
+					"viewName": "company"
 				}
 			}
 		},

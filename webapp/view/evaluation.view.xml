@@ -1,0 +1,49 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:f="sap.f">
+	<App>
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<FlexBox width="100%" alignContent="Center">
+						<FlexBox direction="Column" alignItems="Start" width="25%" alignContent="Center">
+							<VBox alignItems="Center" class="sapUiLargeMargin" wrap="Wrap">
+								<f:Avatar class="avatar" wrap="Wrap" src="https://www.shareicon.net/download/2016/05/29/772558_user_512x512.png" displaySize="XL"></f:Avatar>
+							</VBox>
+							<VBox alignContent="Center" class="sapUiSmallMargin">
+								<Text class="name" text="Geremy Matias"/>
+								<Text text="Plant 52"/>
+								<Text text="Turn: 8am to 10pm"/>
+								<Text text="Task: manage grua"/>
+							</VBox>
+						</FlexBox>
+						<FlexBox direction="Row">
+							
+							<FlexBox width="75%" direction="Column" class="sapUiLargeMargin">
+								<VBox>
+									<Text text="Work done."/>
+								<RatingIndicator maxValue="5" class="sapUiSmallMarginBottom" value="0" iconSize="32px" tooltip="Rating Tooltip"/>
+								</VBox>
+								
+								<Text text="Professionalism."/>
+								<RatingIndicator maxValue="6" class="sapUiSmallMarginBottom" value="0" iconSize="32px" tooltip="Rating Tooltip"/>
+								<Text text="Can I get an answer?"/>
+								<RatingIndicator maxValue="5" class="sapUiSmallMarginBottom" value="0" iconSize="32px" tooltip="Rating Tooltip"/>
+								<Text text="Global feedback."/>
+								<RatingIndicator maxValue="5" class="sapUiSmallMarginBottom" value="0" iconSize="32px" tooltip="Rating Tooltip"/>
+							</FlexBox>
+							<FlexBox justifyContent="Center" width="75%" direction="Column" class="sapUiLargeMargin">
+								<Text text="Work done."/>
+								<RatingIndicator maxValue="5" class="sapUiSmallMarginBottom" value="0" iconSize="32px" tooltip="Rating Tooltip"/>
+								<Text text="Professionalism."/>
+								<RatingIndicator maxValue="6" class="sapUiSmallMarginBottom" value="0" iconSize="32px" tooltip="Rating Tooltip"/>
+								<Text text="Can I get an answer?"/>
+								<RatingIndicator maxValue="5" class="sapUiSmallMarginBottom" value="0" iconSize="32px" tooltip="Rating Tooltip"/>
+								<Text text="Global feedback."/>
+								<RatingIndicator maxValue="5" class="sapUiSmallMarginBottom" value="0" iconSize="32px" tooltip="Rating Tooltip"/>
+							</FlexBox>
+						</FlexBox>
+					</FlexBox>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

@@ -1,0 +1,89 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:tnt="sap.tnt" xmlns:core="sap.ui.core"
+	xmlns:f="sap.ui.layout.form" xmlns:unified="sap.ui.unified" xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+	xmlns:l="sap.ui.layout" controllerName="progresstoolsTeam4progresstools.controller.home" displayBlock="true">
+	<Page title="{i18n>title}">
+		<content>
+			<SplitApp id="SplitAppDemo" initialDetail="detail" initialMaster="master" orientationChange="onOrientationChange">
+				<detailPages>
+					<Page id="detail" title="Daily Plans" class="sapUiStdPage" showNavButton="true" navButtonText="Back" navButtonPress="onPressDetailBack">
+						<content>
+							<VBox class="sapUiSmallMargin">
+								<PlanningCalendar id="PC1" showRowHeaders="false" startDate="{path: '/startDate'}" viewKey="Day" rows="{path: '/people'}"
+									appointmentsVisualization="Filled" appointmentSelect="handleAppointmentSelect" intervalSelect="handleIntervalSelect"
+									showEmptyIntervalHeaders="false">
+									<toolbarContent>
+										<Title text="Title" titleStyle="H4"/>
+										<ToolbarSpacer/>
+										<ToggleButton icon="sap-icon://decrease-line-height" tooltip="Toggle Day Names Line" press="toggleDayNamesLine"/>
+									</toolbarContent>
+									<rows>
+										<PlanningCalendarRow appointments="{path : 'appointments', templateShareable: 'true'}"
+											intervalHeaders="{path: 'headers', templateShareable: 'true'}">
+											<appointments>
+												<unified:CalendarAppointment startDate="{start}" endDate="{end}" icon="{pic}" title="{title}" text="{info}" type="{type}"
+													tentative="{tentative}"></unified:CalendarAppointment>
+											</appointments>
+											<intervalHeaders>
+												<unified:CalendarAppointment startDate="{start}" endDate="{end}" icon="{pic}" title="{title}" type="{type}"></unified:CalendarAppointment>
+											</intervalHeaders>
+										</PlanningCalendarRow>
+									</rows>
+								</PlanningCalendar>
+							</VBox>
+							<VBox id="checkboxes"></VBox>
+						</content>
+					</Page>
+					<Page id="detailDetail" title="Recent Activity" class="sapUiStdPage" showNavButton="true" navButtonText="Back"
+						navButtonPress="onPressDetailBack">
+						<content>
+							<VBox class="sapUiSmallMargin">
+								<Label text="This is your recent Activity"/>
+							</VBox>
+						</content>
+					</Page>
+					<Page id="detail2" title="Team" class="sapUiStdPage" showNavButton="true" navButtonText="Back" navButtonPress="onPressDetailBack">
+						<content>
+							<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout sapUiSmallMarginBottom" header="Carlos Rodriguez"
+								subheader="Excavadora" press="onMessageSuccessDialogPress">
+								<TileContent>
+									<ImageContent src="https://png.icons8.com/color/1600/user-male-skin-type-6.png"/>
+								</TileContent>
+							</GenericTile>
+							<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout sapUiSmallMarginBottom" header="Gabriel Luis Gutierrez"
+								subheader="Oficina" press="onMessageSuccessDialogPress">
+								<TileContent>
+									<ImageContent src="https://png.icons8.com/color/1600/user-male-skin-type-1-2.png"/>
+								</TileContent>
+							</GenericTile>
+							<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout sapUiSmallMarginBottom" header="Benjamin Schmidt"
+								subheader="Grúa" press="onMessageSuccessDialogPress">
+								<TileContent>
+									<ImageContent src="https://png.icons8.com/color/1600/user-male-skin-type-4.png"/>
+								</TileContent>
+							</GenericTile>
+							<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout sapUiSmallMarginBottom" header="Antonia Ramos"
+								subheader="Construcción" press="onMessageSuccessDialogPress">
+								<TileContent>
+									<ImageContent src="https://png.icons8.com/color/180/user-female.png"/>
+								</TileContent>
+							</GenericTile>
+						</content>
+					</Page>
+				</detailPages>
+				<masterPages>
+					<Page id="master1" title="Menu" icon="sap-icon://action" class="sapUiStdPage">
+						<content>
+							<List itemPress="onListItemPress">
+								<items>
+									<StandardListItem title="Daily Activity" type="Active" custom:to="detail"/>
+									<StandardListItem title="Recent Activity" type="Active" custom:to="detailDetail"/>
+									<StandardListItem title="Contact Team" type="Active" custom:to="detail2"/>
+								</items>
+							</List>
+						</content>
+					</Page>
+				</masterPages>
+			</SplitApp>
+		</content>
+	</Page>
+</mvc:View>
